@@ -2183,8 +2183,8 @@
   // Override the mesh area if the automatic (max) area is too large
   #define MESH_MIN_X MESH_INSET
   #define MESH_MIN_Y MESH_INSET
-  #define MESH_MAX_X X_MAX_POS - (MESH_INSET)
-  #define MESH_MAX_Y Y_MAX_POS - (MESH_INSET)
+  #define MESH_MAX_X 221
+  #define MESH_MAX_Y 206
 #endif
 
 #if BOTH(AUTO_BED_LEVELING_UBL, EEPROM_SETTINGS)
