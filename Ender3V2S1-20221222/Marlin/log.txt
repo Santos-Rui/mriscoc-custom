@@ -1,0 +1,9 @@
+Configurations generator script for the Professional Firmware
+Author: Miguel A. Risco Castillo (c) 2022
+
+-Process Fancy Hot Glue Gun/Configuration.h
+-Process Fancy Hot Glue Gun/Configuration_adv.h
+-Process Fancy Hot Glue Gun/Version.h
+-Process Fancy Hot Glue Gun/platformio.ini
+
+Configuration files correctly generated
