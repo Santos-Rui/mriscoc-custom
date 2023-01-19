@@ -6,7 +6,7 @@ G92 E0                                ; Reset Extruder
 
                                       ; RAISE TO LOCK STEPPERS
 G91                                   ; Relative positioning           
-G1 Z10                                ; Raise Z more
+G1 Z1                                 ; Raise Z
 G90                                   ; Absolute positioning
 
                                       ; PRE HEAT
@@ -16,6 +16,10 @@ M190 S{material_bed_temperature}      ; Wait for bed to reach temp
 M104 S{material_print_temperature}    ; Start heating hotend
 G28                                   ; Home all axes
 M420 S1 Z5                            ; Auto Bed Levelling Mesh
+
+
+                                      ; TODO Runout/wipe on brush goes here, one day
+
 
                                       ; RAISE TO FACILITATE CLEANING NOZZLE IF NEEDED
 G91                                   ; Relative positioning         
@@ -49,13 +53,13 @@ G1 Z2.0 F3000                         ; Move Z Axis up little to prevent scratch
 
 G91                                   ; Relative positioning
 G1 E-2 F2700                          ; Retract a bit
-G1 E-2 Z0.2 F2400                     ; Retract and raise Z
-G1 X5 Y5 F3000                        ; Wipe out
+G1 E-2 Z2 F2400                       ; Retract and raise Z
+G1 X5 F3000                           ; Wipe out
 G90                                   ; Absolute positioning
 
 
-G1 X0 Y235                            ; Present print
-G27 P0                                ; PARk
+G1  Y235                              ; Present print
+G27 P0                                ; PARK
 
                                       ; COOLDOWN
 M106 S0                               ; Turn-off fan
