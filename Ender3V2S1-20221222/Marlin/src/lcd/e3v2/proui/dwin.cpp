@@ -2238,7 +2238,7 @@ void SetPID(celsius_t t, heater_id_t h) {
 #if ProUIex && ENABLED(NOZZLE_PARK_FEATURE)
   void SetParkPosX()   { SetPIntOnClick(X_MIN_POS, X_MAX_POS); }
   void SetParkPosY()   { SetPIntOnClick(Y_MIN_POS, Y_MAX_POS); }
-  void SetParkZRaise() { SetPIntOnClick(Z_MIN_POS, 50); }
+  void SetParkZRaise() { SetPIntOnClick(Z_MIN_POS, Z_MAX_POS); }
 #endif
 
 #if HAS_FILAMENT_SENSOR

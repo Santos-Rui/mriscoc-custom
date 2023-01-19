@@ -58,8 +58,9 @@ G1 X5 F3000                           ; Wipe out
 G90                                   ; Absolute positioning
 
 
-G1  Y235                              ; Present print
-G27 P0                                ; PARK
+G1 Y235                               ; Present print
+G1 Z194                               ; PSEUDO PARK
+;G27 P0                               ; PARK
 
                                       ; COOLDOWN
 M106 S0                               ; Turn-off fan
