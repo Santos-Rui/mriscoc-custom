@@ -1,0 +1,63 @@
+;CUSTOM START G-CODE
+
+M413 S0                               ; Disable power recovery
+G92 E0                                ; Reset Extruder
+
+
+                                      ; RAISE TO LOCK STEPPERS
+G91                                   ; Relative positioning           
+G1 Z10                                ; Raise Z more
+G90                                   ; Absolute positioning
+
+                                      ; PRE HEAT
+M140 S{material_bed_temperature}      ; Start heating bed                
+M104 S160                             ; Start semi-heating hotend
+M190 S{material_bed_temperature}      ; Wait for bed to reach temp
+M104 S{material_print_temperature}    ; Start heating hotend
+G28                                   ; Home all axes
+M420 S1 Z5                            ; Auto Bed Levelling Mesh
+
+                                      ; RAISE TO FACILITATE CLEANING NOZZLE IF NEEDED
+G91                                   ; Relative positioning         
+G1 Z20                                ; Raise Z more
+G90                                   ; Absolute positioning
+M109 S{material_print_temperature}    ; Wait for hotend to reach printing temp
+
+
+                                      ; PRIME
+G1 Z2.0 F3000                         ; Move Z Axis up little to prevent scratching of Heat Bed
+G1 X0.1 Y20 Z0.3 F5000.0              ; Move to start position
+G1 X0.1 Y200.0 Z0.3 F1500.0 E15       ; Draw the first line
+G1 X0.4 Y200.0 Z0.3 F5000.0           ; Move to side a little
+G1 X0.4 Y20 Z0.3 F1500.0 E30          ; Draw the second line
+G92 E0                                ; Reset Extruder
+G1 Z2.0 F3000                         ; Move Z Axis up little to prevent scratching o
+
+
+
+
+
+
+
+
+
+
+
+
+
+;CUSTOM END G-CODE
+
+G91                                   ; Relative positioning
+G1 E-2 F2700                          ; Retract a bit
+G1 E-2 Z0.2 F2400                     ; Retract and raise Z
+G1 X5 Y5 F3000                        ; Wipe out
+G90                                   ; Absolute positioning
+
+
+G1 X0 Y235                            ; Present print
+G27 P0                                ; PARk
+
+                                      ; COOLDOWN
+M106 S0                               ; Turn-off fan
+M104 S0                               ; Turn-off hotend
+M140 S0                               ; Turn-off bed
