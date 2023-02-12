@@ -27,9 +27,9 @@
 
 #include "env_validate.h"
 
-#if HAS_MULTI_HOTEND || E_STEPPERS > 1
-  #error "Creality v4 only supports 1 hotend / E stepper."
-#endif
+//#if HAS_MULTI_HOTEND || E_STEPPERS > 1
+//  #error "Creality v4 only supports 1 hotend / E stepper."
+//#endif
 
 #ifndef BOARD_INFO_NAME
   #define BOARD_INFO_NAME      "Creality V4"
@@ -88,7 +88,7 @@
 #endif
 
 #ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                   PB1   // BLTouch IN
+  #define Z_MIN_PROBE_PIN                   PA7   // BLTouch IN
 #endif
 
 //
@@ -306,3 +306,11 @@
 #define SDIO_D3_PIN                         PC11
 #define SDIO_CK_PIN                         PC12
 #define SDIO_CMD_PIN                        PD2
+
+
+//
+// Add custom stepper motor (dual z)
+//
+#define E1_ENABLE_PIN                       PB1 //(connect to ground to always enable)
+#define E1_STEP_PIN                         PA14 //SWCLK (STEP - pulled low)
+#define E1_DIR_PIN                          PA13 //SWIO  (DIR - pulled high)
