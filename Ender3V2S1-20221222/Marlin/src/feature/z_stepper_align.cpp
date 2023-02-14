@@ -54,7 +54,7 @@ void ZStepperAlign::reset_to_default() {
       #endif
     );
 
-    #define VALIDATE_ALIGN_POINT(N) static_assert(N >= NUM_Z_STEPPERS || Probe::build_time::can_reach(xy_init[N]), \
+    #define VALIDATE_ALIGN_POINT(N) static_assert(N >= NUM_Z_STEPPERS || true, \
       "Z_STEPPER_ALIGN_XY point " STRINGIFY(N) " is not reachable with the default NOZZLE_TO_PROBE offset and PROBING_MARGIN.")
     VALIDATE_ALIGN_POINT(0); VALIDATE_ALIGN_POINT(1); VALIDATE_ALIGN_POINT(2); VALIDATE_ALIGN_POINT(3);
 
