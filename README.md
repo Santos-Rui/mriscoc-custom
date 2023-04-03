@@ -1,5 +1,3 @@
-# mriscoc-custom
-
 BLT 
 Temp sensor 5
 no stepper timeout
@@ -10,3 +8,6 @@ max xyz
 sound
 mesh inset
 pid's
+
+
+Instructions Boreal Spring 2023
