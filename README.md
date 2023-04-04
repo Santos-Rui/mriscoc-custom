@@ -10,4 +10,12 @@ mesh inset
 pid's
 
 
-Instructions Boreal Spring 2023
+#############    Instructions Boreal Spring 2023    #############
+
+0 - Compilar STM32F10ERE_creality 512k
+
+
+1 - Base-> Ender3V2-427-BLTUBL-T5-MPC           MPC -> Alternativa a PID, supostamente melhor
+
+
+2 - 
