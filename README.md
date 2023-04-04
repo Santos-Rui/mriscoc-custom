@@ -10,12 +10,43 @@ mesh inset
 pid's
 
 
-#############    Instructions Boreal Spring 2023    #############
+# Instructions Boreal Spring 2023
 
-0 - Compilar STM32F10ERE_creality 512k
+##  Compile
+
+ - Option STM32F10ERE_creality 512k
+
+## Base Config 
+
+- Ender3V2-427-BLTUBL-T5-MPC (MPC -> Alternative to PID)
 
 
-1 - Base-> Ender3V2-427-BLTUBL-T5-MPC           MPC -> Alternativa a PID, supostamente melhor
+
+## Extra Z Stepepr
+
+### pins_CREALITY_V4.h
 
 
-2 - 
+- Commentar esta merda, ou não dá
+```
+(M)// #if HOTENDS > 1 || E_STEPPERS > 1
+(M)//   #error "Creality V4 only supports one hotend / E-stepper. Comment out this line to continue."
+(M)// #endif
+```
+
+- Free pin to have 3 free ones for extra stepper full control
+```
+(M) #define Z_MIN_PROBE_PIN                   PA7   // BLTouch IN
+```
+
+- Define new pins
+```
+(+) #define E1_ENABLE_PIN                       PB1 //(connect to ground to always enable)
+(+) #define E1_STEP_PIN                         PA14 //SWCLK (STEP - pulled low)
+(+) #define E1_DIR_PIN                          PA13 //SWIO  (DIR - pulled high)
+```
+
+### Configuration.h
+```
+(+) #define Z2_DRIVER_TYPE  TMC2208_STANDALONE   // Ender Configs - Extra Z
+```

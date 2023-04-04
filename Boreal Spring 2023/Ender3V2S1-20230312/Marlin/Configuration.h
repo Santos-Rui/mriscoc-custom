@@ -165,6 +165,7 @@
 #define X_DRIVER_TYPE  TMC2208_STANDALONE  // Ender Configs
 #define Y_DRIVER_TYPE  TMC2208_STANDALONE  // Ender Configs
 #define Z_DRIVER_TYPE  TMC2208_STANDALONE  // Ender Configs
+#define Z2_DRIVER_TYPE  TMC2208_STANDALONE   // Ender Configs - Extra Z
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
