@@ -2121,7 +2121,7 @@ void SetMoveZto0() {
 void DoCoolDown() { thermalManager.cooldown(); }
 
 
-bool EnableLiveMove = false;
+bool EnableLiveMove = true;
 void SetLiveMove() { Toggle_Chkb_Line(EnableLiveMove); }
 void AxisMove(AxisEnum axis) {
   #if HAS_HOTEND

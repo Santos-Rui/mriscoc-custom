@@ -1762,15 +1762,15 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 230  // MRiscoC Max usable bed size
-#define Y_BED_SIZE 230  // MRiscoC Max usable bed size
+#define X_BED_SIZE 235  // MRiscoC Max usable bed size
+#define Y_BED_SIZE 235  // MRiscoC Max usable bed size
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0  // MRiscoC Stock physical limit
 #define Y_MIN_POS 0  // MRiscoC Stock physical limit
 #define Z_MIN_POS 0
-#define X_MAX_POS 248  // MRiscoC Stock physical limit
-#define Y_MAX_POS 231  // MRiscoC Stock physical limit
+#define X_MAX_POS 249  // MRiscoC Stock physical limit
+#define Y_MAX_POS 213  // To be increased
 #define Z_MAX_POS 250  // Ender Configs
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
@@ -2053,8 +2053,8 @@
 
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 25              // Set Mesh bounds as an inset region of the bed  // MRiscoC Center mesh
-  #define GRID_MAX_POINTS_X 5      // Don't use more than 15 points per axis, implementation limited.  // MRiscoC Customizable by menu
+  #define MESH_INSET 10              // Set Mesh bounds as an inset region of the bed  // MRiscoC Center mesh
+  #define GRID_MAX_POINTS_X 7      // Don't use more than 15 points per axis, implementation limited.  // MRiscoC Customizable by menu
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   //#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
@@ -2116,7 +2116,7 @@
 #define LCD_BED_TRAMMING  // ProUI has a bed tramming menu
 
 #if ENABLED(LCD_BED_TRAMMING)
-  #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
+  #define BED_TRAMMING_INSET_LFRB { 10, 10, 10, 10 } // (mm) Left, Front, Right, Back insets
   #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at leveling points
   #define BED_TRAMMING_Z_HOP       5.0        // (mm) Z height of nozzle between leveling points
   //#define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner

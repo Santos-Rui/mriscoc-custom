@@ -1,8 +1,13 @@
-BLT 
-Temp sensor 5
-max xyz
+zoffset
+
 mesh inset
+
 pid's
+
+live move
+
+preheats/bed leveling temps
+
 
 
 # Instructions Boreal Spring 2023
@@ -73,12 +78,14 @@ pid's
 <br/><br/>
 
 
+
 ## Sound
 ### Configuration_adv.h
 ```
 (M) //#define SOUND_ON_DEFAULT    // Buzzer/speaker default enabled state
 ```
 <br/><br/>
+
 
 
 ## Default steps
@@ -89,9 +96,51 @@ pid's
 <br/><br/>
 
 
+
 ## Temp Sensor
 ### Configuration.h
 ```
 (M) #define TEMP_SENSOR_0 5  // Volcano thermistor
+```
+<br/><br/>
+
+
+## Live Move
+### dwin.cpp
+```
+(M) bool EnableLiveMove = true;
+```
+<br/><br/>
+
+
+## Max/Min Positions
+### Configuration.h
+
+```
+// The size of the printable area
+#define X_BED_SIZE 235  // MRiscoC Max usable bed size
+#define Y_BED_SIZE 235  // MRiscoC Max usable bed size
+```
+```
+(M)#define Y_MAX_POS 213  // To be increased
+(M)#define Z_MAX_POS 249  // 
+```
+<br/><br/>
+
+
+ ## Mesh
+### Configuration.h
+
+```
+(M) #define MESH_INSET 10           
+(M) #define GRID_MAX_POINTS_X 7     
+```
+### Configuration_adv.h
+```
+#define X_MIN_POS 0  // MRiscoC Stock physical limit
+#define Y_MIN_POS 0  // MRiscoC Stock physical limit
+(M)#define Z_MIN_POS 0
+(M)#define Y_MAX_POS 213  // To be increased
+(M)#define Z_MAX_POS 249  // 
 ```
 <br/><br/>
