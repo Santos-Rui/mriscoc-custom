@@ -1,11 +1,6 @@
 BLT 
 Temp sensor 5
-no stepper timeout
-e-steps
-jerk
-probe offset
 max xyz
-sound
 mesh inset
 pid's
 
@@ -81,11 +76,14 @@ pid's
 ## Sound
 ### Configuration_adv.h
 ```
-(M) ///#define SOUND_ON_DEFAULT    // Buzzer/speaker default enabled state
+(M) //#define SOUND_ON_DEFAULT    // Buzzer/speaker default enabled state
 ```
 <br/><br/>
 
 
-## Sound
-
+## Default steps
+### Configuration.h
+```
+(M) //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 96.6 }  // Ender Configs
+```
 <br/><br/>
