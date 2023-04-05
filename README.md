@@ -87,3 +87,11 @@ pid's
 (M) //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 96.6 }  // Ender Configs
 ```
 <br/><br/>
+
+
+## Temp Sensor
+### Configuration.h
+```
+(M) #define TEMP_SENSOR_0 5  // Volcano thermistor
+```
+<br/><br/>
