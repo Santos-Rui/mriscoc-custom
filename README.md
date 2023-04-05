@@ -1,12 +1,10 @@
+# TODO
+
+- Max Y + upgraded bed holder. Mesh is also only going to 210 for some reason
+
 zoffset
 
-mesh inset
-
-pid's
-
-live move
-
-preheats/bed leveling temps
+pid's MPC?
 
 
 
@@ -144,3 +142,13 @@ preheats/bed leveling temps
 (M)#define Z_MAX_POS 249  // 
 ```
 <br/><br/>
+
+
+## Temps
+
+### Configuration.h
+
+```
+(M) #define PROBING_BED_TEMP     60
+```
+
