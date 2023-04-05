@@ -16,9 +16,14 @@ pid's
 
  - Option STM32F10ERE_creality 512k
 
+<br/><br/>
+
+
 ## Base Config 
 
 - Ender3V2-427-BLTUBL-T5-MPC (MPC -> Alternative to PID)
+
+<br/><br/>
 
 
 
@@ -50,3 +55,29 @@ pid's
 ```
 (+) #define Z2_DRIVER_TYPE  TMC2208_STANDALONE   // Ender Configs - Extra Z
 ```
+<br/><br/>
+
+
+
+## Probe Offset 
+### Configuration.h
+
+```
+#define NOZZLE_TO_PROBE_OFFSET { -44, 3, -2 }
+```
+<br/><br/>
+
+
+
+## Jerk
+
+<br/><br/>
+
+## Sound
+
+<br/><br/>
+
+
+## Sound
+
+<br/><br/>
