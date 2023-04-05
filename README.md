@@ -63,13 +63,18 @@ pid's
 ### Configuration.h
 
 ```
-#define NOZZLE_TO_PROBE_OFFSET { -44, 3, -2 }
+(M) #define NOZZLE_TO_PROBE_OFFSET { -44, 3, -2 }
 ```
 <br/><br/>
 
 
 
 ## Jerk
+### Configuration.h
+```
+(M)  #define DEFAULT_XJERK 15.0  // Ender Configs
+(M)  #define DEFAULT_YJERK 15.0  // Ender Configs
+```
 
 <br/><br/>
 
