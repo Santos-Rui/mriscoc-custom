@@ -79,12 +79,12 @@ pid's
 
 
 ## Sound
-### Configuration.h
-
+### Configuration_adv.h
+```
+(M) ///#define SOUND_ON_DEFAULT    // Buzzer/speaker default enabled state
+```
 <br/><br/>
-```
-(M) #define LCD_FEEDBACK_FREQUENCY_DURATION_MS 0  // Ender Configs
-```
+
 
 ## Sound
 
