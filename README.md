@@ -2,9 +2,13 @@
 
 - Max Y + upgraded bed holder. Mesh is also only going to 210 for some reason
 
-zoffset
+- Start end g-code
 
-pid's MPC?
+- zoffset
+
+- pid's MPC?
+
+- idle timout?
 
 
 
@@ -61,7 +65,7 @@ pid's MPC?
 ### Configuration.h
 
 ```
-(M) #define NOZZLE_TO_PROBE_OFFSET { -44, 3, -2 }
+(M) #define NOZZLE_TO_PROBE_OFFSET { -44, 3, -4.30 }
 ```
 <br/><br/>
 
