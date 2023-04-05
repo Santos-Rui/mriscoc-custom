@@ -75,13 +75,16 @@ pid's
 (M)  #define DEFAULT_XJERK 15.0  // Ender Configs
 (M)  #define DEFAULT_YJERK 15.0  // Ender Configs
 ```
-
 <br/><br/>
+
 
 ## Sound
+### Configuration.h
 
 <br/><br/>
-
+```
+(M) #define LCD_FEEDBACK_FREQUENCY_DURATION_MS 0  // Ender Configs
+```
 
 ## Sound
 
