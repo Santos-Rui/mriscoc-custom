@@ -4,8 +4,6 @@
 
 - Start end g-code
 
-- zoffset
-
 - pid's MPC?
 
 - idle timout?
