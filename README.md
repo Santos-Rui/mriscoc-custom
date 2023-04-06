@@ -6,8 +6,6 @@
 
 - pid's MPC?
 
-- idle timout?
-
 
 
 # Instructions Boreal Spring 2023
@@ -152,5 +150,6 @@
 
 ```
 (M) #define PROBING_BED_TEMP     60
+(M)  #define LEVELING_BED_TEMP     60
 ```
 
