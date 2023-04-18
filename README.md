@@ -1,7 +1,5 @@
 # TODO
 
-- Max Y + upgraded bed holder. Mesh is also only going to 210 for some reason
-
 - Start end g-code
 
 - pid's MPC?
@@ -116,12 +114,12 @@
 
 ```
 // The size of the printable area
-#define X_BED_SIZE 235  // MRiscoC Max usable bed size
-#define Y_BED_SIZE 235  // MRiscoC Max usable bed size
+#define X_BED_SIZE 230  // MRiscoC Max usable bed size
+#define Y_BED_SIZE 230  // MRiscoC Max usable bed size
 ```
 ```
-(M)#define Y_MAX_POS 213  // To be increased
-(M)#define Z_MAX_POS 249  // 
+(M)#define Y_MAX_POS 230  
+(M)#define Z_MAX_POS 249 
 ```
 <br/><br/>
 
@@ -138,11 +136,19 @@
 #define X_MIN_POS 0  // MRiscoC Stock physical limit
 #define Y_MIN_POS 0  // MRiscoC Stock physical limit
 (M)#define Z_MIN_POS 0
-(M)#define Y_MAX_POS 213  // To be increased
+(M)#define Y_MAX_POS 220  // 
 (M)#define Z_MAX_POS 249  // 
 ```
 <br/><br/>
 
+ ## Tramming
+### Configuration.h
+
+```
+(M)  #define BED_TRAMMING_INSET_LFRB { 10, 10, 10, 10 }    
+```
+
+<br/><br/>
 
 ## Temps
 
