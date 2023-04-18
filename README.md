@@ -4,6 +4,7 @@
 
 - pid's MPC?
 
+- timeout
 
 
 # Instructions Boreal Spring 2023
@@ -59,7 +60,7 @@
 ### Configuration.h
 
 ```
-(M) #define NOZZLE_TO_PROBE_OFFSET { -44, 3, -4.30 }
+(M) #define NOZZLE_TO_PROBE_OFFSET { -44, 3, -4.28 }
 ```
 <br/><br/>
 
@@ -118,6 +119,7 @@
 #define Y_BED_SIZE 230  // MRiscoC Max usable bed size
 ```
 ```
+(M)#define X_MAX_POS 249
 (M)#define Y_MAX_POS 230  
 (M)#define Z_MAX_POS 249 
 ```

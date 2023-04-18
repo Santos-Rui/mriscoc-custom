@@ -2198,7 +2198,7 @@ void SetMoveZ() { HMI_value.axis = Z_AXIS; SetPFloatOnClick(Z_MIN_POS, Z_MAX_POS
   void ApplyBrightness() { ui.set_brightness(MenuData.Value); }
   void LiveBrightness() { DWIN_LCD_Brightness(MenuData.Value); }
   void SetBrightness() { SetIntOnClick(LCD_BRIGHTNESS_MIN, LCD_BRIGHTNESS_MAX, ui.brightness, ApplyBrightness, LiveBrightness); }
-  void TurnOffBacklight() { HMI_SaveProcessID(WaitResponse); ui.set_brightness(0); DWIN_RedrawScreen(); }
+  void TurnOffBacklight() { queue.inject(F("G34")); } //G34
 #endif
 
 #if ENABLED(CASE_LIGHT_MENU)
