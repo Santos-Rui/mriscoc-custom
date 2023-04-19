@@ -180,7 +180,6 @@ MPC?
 ### Configuration.h
 
 ```
-(M)   // Measured physical constants from M306
 (M)   #define MPC_BLOCK_HEAT_CAPACITY { 16.42 }           // (J/K) Heat block heat capacities.
 (M)   #define MPC_SENSOR_RESPONSIVENESS { 0.1312 }         // (K/s per ∆K) Rate of change of sensor temperature from heat block.
 (M)   #define MPC_AMBIENT_XFER_COEFF { 0.0842 }           // (W/K) Heat transfer coefficients from heat block to room air with fan off.
@@ -189,4 +188,12 @@ MPC?
 
 
 
+<br/><br/>
+
+ ## Stepepr Timeout
+### Configuration_adv.h
+
+```
+#define DEFAULT_STEPPER_DEACTIVE_TIME 900
+```
 
