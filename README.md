@@ -161,3 +161,18 @@
 (M)  #define LEVELING_BED_TEMP     60
 ```
 
+
+<br/><br/>
+
+ ## Bed PID
+### Configuration.h
+
+```
+(M)  #define DEFAULT_bedKp 203.80
+(M)  #define DEFAULT_bedKi 39.81
+(M)  #define DEFAULT_bedKd 695.64
+```
+
+
+
+
