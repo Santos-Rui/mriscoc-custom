@@ -188,7 +188,7 @@
 
 <br/><br/>
 
- ## Stepepr Timeout
+ ## Stepper Timeout
 ### Configuration_adv.h
 
 ```
