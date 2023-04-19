@@ -2,11 +2,6 @@
 
 - Start end g-code
 
-MPC?
-
-- timeout
-
-
 # Instructions Boreal Spring 2023
 
 ##  Compile
