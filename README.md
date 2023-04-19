@@ -2,7 +2,7 @@
 
 - Start end g-code
 
-- pid's MPC?
+MPC?
 
 - timeout
 
@@ -171,6 +171,20 @@
 (M)  #define DEFAULT_bedKp 203.80
 (M)  #define DEFAULT_bedKi 39.81
 (M)  #define DEFAULT_bedKd 695.64
+```
+
+
+<br/><br/>
+
+ ## HotEnd MPC
+### Configuration.h
+
+```
+(M)   // Measured physical constants from M306
+(M)   #define MPC_BLOCK_HEAT_CAPACITY { 16.42 }           // (J/K) Heat block heat capacities.
+(M)   #define MPC_SENSOR_RESPONSIVENESS { 0.1312 }         // (K/s per ∆K) Rate of change of sensor temperature from heat block.
+(M)   #define MPC_AMBIENT_XFER_COEFF { 0.0842 }           // (W/K) Heat transfer coefficients from heat block to room air with fan off.
+(M)   #define MPC_AMBIENT_XFER_COEFF_FAN255 { 0.1027 }  // (W/K) Heat transfer coefficients from heat block to room air with fan on full.
 ```
 
 
